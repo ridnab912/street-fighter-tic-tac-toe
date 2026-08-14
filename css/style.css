@@ -1,0 +1,163 @@
+/* CSS FOR TIC TAC TOE */
+* {
+	margin: 0; 
+	padding: 0; 
+	user-select: none;
+	ms-user-select: none;
+	mo-user-select: none;
+	webkit-user-select: none;
+}
+body {
+	text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+	background-color: black;
+}
+div.board {
+	width: 450px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background-color: rgba(0,0,0,.7);
+	font-family: epicslash;
+}
+.logo {
+	margin: 0 -150px;
+	position: fixed;
+	z-index: -1;
+}
+h2 {
+	padding-top: 100px;
+	height: 50px;
+	font-size: 50px;
+	color: #CC2229;
+}
+#turn {
+	margin-top: 20px;
+	margin-bottom: -69px;
+	color: #f0ad06;
+}
+.hp-name {
+	display: inline-flex;
+	flex-direction: row;
+	height: 80px;
+	width: 1154px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.hp-name .p1-content, .hp-name .p2-content {
+	width: 472px;
+	height: 73px;
+}
+.hp-name .p1-content {margin-right: 206px;}
+#p1-health-bar, #p2-health-bar {
+	width: 450px;
+	height: 30px;
+	display: flex;
+	flex-direction: row;
+	border: 5px solid #f0ad06;
+}
+#p1-health-bar div, #p2-health-bar div {
+	width: 75px;
+	height: 30px;
+	background-color: red;
+}
+#p2-health-bar {
+	float: right;
+	flex-direction: row-reverse;
+}
+.p1-ko, .p2-ko {background-color: red;}
+#p1-win-counter, #p2-win-counter {
+	width: 576px;
+	height: 55px;
+	display: flex;
+	flex-direction: row;
+}
+#p2-win-counter {
+	float: right;
+	flex-direction: row-reverse;
+}
+#p1-v-1, #p1-v-2, #p2-v-1, #p2-v-2 {
+	width: 25px;
+	height: 25px;
+	border: 1px dashed black;
+	margin: 2px;
+}
+.p1-name {width: 395px; text-align: left;}
+.p2-name {width: 395px; text-align: right;}
+.main-content {
+	display: inline-flex;
+	margin: 0;
+}
+.p1-img, .p2-img {
+	width: 350px;
+	position: relative;
+}
+#ryu, #ken {
+	position: absolute;
+	bottom: 0;
+}
+#ryu {left: 0;}
+#ken {right: 0;padding-right: 1px;}
+#game-msg {
+	width: 1159px;
+	height: 635px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 180px;
+	position: absolute;
+	background-color: rgba(245,245,245,.7);
+	font-size: 35px;
+	display: block;
+}
+#round {
+	background-color: #CC2229;
+	color: #f0ad06;
+}
+#msg-gif {
+	padding: 45px 325px;
+}
+button {
+	background-color: #CC2229;
+	border: none;
+	color: #f0ad06;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 12px;
+	height: 75px;
+	width: 340px;
+	font-size: 35px;
+	box-shadow: 0 9px #999;
+}
+button:hover {background-color: #f0ad06; color: #CC2229;}
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.hide {display: none;}
+div[id^="row"] div {
+	width: 150px;
+	height: 150px;
+	border: 1px solid #CC2229;
+	display: block;
+	float: left;
+	box-sizing: border-box;
+}
+div[id^="row"] {
+	clear: both;
+	overflow: hidden;
+}
+div[id^="row"] div:first-child {border-left: none;}
+div[id^="row"] div:last-child {border-right: none;}
+div[id^="row-1"] div {border-top: none;}
+div[id^="row-3"] div {border-bottom: none;}
+span {
+	font-size: 115px;
+	padding-top: 12px;
+	display: inline-block;
+	color: #F0AD06;
+}
+@font-face {
+  font-family: 'EpicSlash';
+  src: url(epicslash.woff)  format('truetype');
+}
