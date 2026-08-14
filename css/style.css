@@ -9,10 +9,18 @@
 }
 body {
 	text-align: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
 	background-color: black;
+	overflow: hidden;
+}
+#game-container {
+	width: 1159px;
+	height: 815px;
+	margin: 0 auto;
+	position: relative;
+	transform-origin: top center;
 }
 div.board {
 	width: 450px;
@@ -159,5 +167,5 @@ span {
 }
 @font-face {
   font-family: 'EpicSlash';
-  src: url(epicslash.woff)  format('truetype');
+  src: url(epicslash.woff) format('truetype');
 }
