@@ -9,34 +9,21 @@
 }
 body {
 	text-align: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 	background-color: black;
-	overflow: hidden;
-}
-#game-container {
-	width: 1150px;
-	height: 815px;
-	position: absolute;
-	left: 50%;
-	top: 0;
-	margin: 0;
-	transform-origin: top left;
 }
 div.board {
 	width: 450px;
-	margin: 0;
+	margin: 0 auto;
 	border: 1px solid black;
 	background-color: rgba(0,0,0,.7);
 	font-family: epicslash;
 }
 .logo {
-	position: absolute;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%);
-	margin: 0;
+	margin: 0 -150px;
+	position: fixed;
 	z-index: -1;
 }
 h2 {
@@ -52,17 +39,16 @@ h2 {
 	color: #f0ad06;
 }
 .hp-name {
-	display: flex;
+	display: inline-flex;
 	flex-direction: row;
-	width: 1150px;
 	height: 80px;
-	margin: 0;
+	width: 1154px;
+	margin: 0 auto;
 	margin-top: 100px;
 }
 .hp-name .p1-content, .hp-name .p2-content {
 	width: 472px;
 	height: 73px;
-	flex: 0 0 472px;
 }
 .hp-name .p1-content {margin-right: 206px;}
 #p1-health-bar, #p2-health-bar {
@@ -101,14 +87,11 @@ h2 {
 .p1-name {width: 395px; text-align: left;}
 .p2-name {width: 395px; text-align: right;}
 .main-content {
-	display: flex;
-	flex-direction: row;
-	width: 1150px;
+	display: inline-flex;
 	margin: 0;
 }
 .p1-img, .p2-img {
 	width: 350px;
-	flex: 0 0 350px;
 	position: relative;
 }
 #ryu, #ken {
@@ -118,10 +101,10 @@ h2 {
 #ryu {left: 0;}
 #ken {right: 0;padding-right: 1px;}
 #game-msg {
-	width: 1150px;
+	width: 1159px;
 	height: 635px;
-	left: 0;
-	transform: none;
+	left: 50%;
+	transform: translateX(-50%);
 	top: 180px;
 	position: absolute;
 	background-color: rgba(245,245,245,.7);
