@@ -22,7 +22,7 @@ body {
 	left: 50%;
 	top: 0;
 	margin: 0;
-	transform-origin: top center;
+	transform-origin: top left;
 }
 div.board {
 	width: 450px;
