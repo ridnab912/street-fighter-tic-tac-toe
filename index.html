@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tic Tac Toe - Street Fighter Edition</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 	<script src="js/script.js"></script>
+	<script>
+		function resizeGame() {
+			var game = document.getElementById("game-container");
+			if (!game) return;
+
+			var gameWidth = 1159;
+			var gameHeight = 815;
+			var scale = Math.min(
+				window.innerWidth / gameWidth,
+				window.innerHeight / gameHeight
+			);
+
+			scale = Math.min(scale, 1);
+			game.style.transform = "scale(" + scale + ")";
+		}
+
+		window.addEventListener("resize", resizeGame);
+		window.addEventListener("load", resizeGame);
+	</script>
 </head>
 <body onload="reset();">
-	<img class="logo" src="img/logo.png">
-	<h2>Tic Tac Toe</h2>
-	<div id="display">
-		<h1 id="turn"></h1>
-		<div id="health-bars" class="hp-name">
-			<div class="p1-content">
-				<div id="p1-health-bar"></div>
-				<div id="p1-win-counter">
-					<div class="p1-name"><h3 id="p1-name">Ryu</h3></div>
-					<div id="p1-v-1"></div>
-					<div id="p1-v-2"></div>
+	<div id="game-container">
+		<img class="logo" src="img/logo.png">
+		<h2>Tic Tac Toe</h2>
+		<div id="display">
+			<h1 id="turn"></h1>
+			<div id="health-bars" class="hp-name">
+				<div class="p1-content">
+					<div id="p1-health-bar"></div>
+					<div id="p1-win-counter">
+						<div class="p1-name"><h3 id="p1-name">Ryu</h3></div>
+						<div id="p1-v-1"></div>
+						<div id="p1-v-2"></div>
+					</div>
+				</div>
+				<div class="p2-content">
+					<div id="p2-health-bar"></div>
+					<div id="p2-win-counter">
+						<div class="p2-name"><h3 id="p2-name">Ken</h3></div>
+						<div id="p2-v-1"></div>
+						<div id="p2-v-2"></div>
+					</div>
 				</div>
 			</div>
-			<div class="p2-content">
-				<div id="p2-health-bar"></div>
-				<div id="p2-win-counter">
-					<div class="p2-name"><h3 id="p2-name">Ken</h3></div>
-					<div id="p2-v-1"></div>
-					<div id="p2-v-2"></div>
+			<div id="main" class="main-content">
+				<div class="p1-img">
+					<img id="ryu" src="img/p1-default.gif">
+				</div>
+				<div id="game-board" class="board"></div>
+				<div class="p2-img">
+					<img id="ken" src="img/p2-default.gif">
 				</div>
 			</div>
 		</div>
-		<div id="main" class="main-content">
-			<div class="p1-img">
-				<img id="ryu" src="img/p1-default.gif">
-			</div>
-			<div id="game-board" class="board"></div>
-			<div class="p2-img">
-				<img id="ken" src="img/p2-default.gif">
-			</div>
-		</div>
-	</div>	
-	<div id="game-msg">
+		<div id="game-msg">
 			<h1 id="round">ROUND 1</h1>
 			<img id="msg-gif" src="img/start.gif">
 			<button id="btn" class="" type="button" onclick="hide();"><h1 id="btn-msg">FIGHT!</h1></button>
 			<button id="btn-reset" class="hide" type="button" onclick="location.reload();"><h1 id="btn-msg">RESET</h1></button>
 		</div>
+	</div>
 </body>
 </html>
