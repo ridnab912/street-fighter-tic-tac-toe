@@ -39,7 +39,7 @@ h2 {
 	height: 50px;
 	font-size: 50px;
 	color: #000000;
-	font-family: NoctraDrip;
+	font-family: noctradrip;
 }
 #turn {
 	margin-top: 20px;
@@ -168,7 +168,7 @@ span {
 }
 @font-face {
   font-family: 'EpicSlash';
-  src: url(epicslash.woff) format('truetype');
+  src: url(epicslash.woff) format('woff');
 }
 @font-face {
 	font-family: 'NoctraDrip';
