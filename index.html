@@ -10,7 +10,7 @@
 			var game = document.getElementById("game-container");
 			if (!game) return;
 
-			var gameWidth = 1159;
+			var gameWidth = 1150;
 			var gameHeight = 815;
 			var scale = Math.min(
 				window.innerWidth / gameWidth,
@@ -18,7 +18,7 @@
 			);
 
 			scale = Math.min(scale, 1);
-			game.style.transform = "scale(" + scale + ")";
+			game.style.transform = "translateX(-50%) scale(" + scale + ")";
 		}
 
 		window.addEventListener("resize", resizeGame);
