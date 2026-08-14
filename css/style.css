@@ -38,7 +38,8 @@ h2 {
 	padding-top: 100px;
 	height: 50px;
 	font-size: 50px;
-	color: #CC2229;
+	color: #000000;
+	font-family: NoctraDrip;
 }
 #turn {
 	margin-top: 20px;
@@ -168,4 +169,8 @@ span {
 @font-face {
   font-family: 'EpicSlash';
   src: url(epicslash.woff) format('truetype');
+}
+@font-face {
+	font-family: 'NoctraDrip';
+	src: url(NoctraDripOutlinemeltOutlinemelt-gwX75.ttf) format('truetype');
 }
